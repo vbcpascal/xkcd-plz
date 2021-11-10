@@ -18,7 +18,12 @@ function randomPage() {
   var max = 2539
   var index = Math.floor(Math.random() * max) + 1;
   var url = "https://xkcd.com/" + index;
-  chrome.tabs.create({ "url": url });
+
+  chrome.tabs.query({ active: true, currentWindow: true },
+    function (tabs) {
+      chrome.tabs.create({ "url": url, "index": tabs[0].index + 1 });
+    }
+  );
 }
 
 function explainThePage() {
