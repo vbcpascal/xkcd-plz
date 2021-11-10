@@ -1,6 +1,4 @@
-# xkcd-plz
-
-![icon-128](icons/icon-48.png)
+# ![icon](icons/icon-32.png) xkcd-plz
 
 This extension for Chrome/Edge support a convenient way to show a random xkcd page and explain it. 
 
