@@ -1,6 +1,3 @@
-const rndxkcd = document.getElementById("rndxkcd");
-const explain = document.getElementById("explain");
-
 if (typeof msBrowser !== 'undefined') {
   chrome = msBrowser;
 } else if (typeof browser !== 'undefined') {
@@ -40,14 +37,5 @@ function explainThePage() {
   );
 }
 
-if (explain) {
-  explain.onclick = function () {
-    explainThePage();
-  }
-}
-
-if (rndxkcd) {
-  rndxkcd.onclick = function () {
-    randomPage();
-  }
-}
+document.getElementById("rndxkcd").addEventListener("click", randomPage);
+document.getElementById("explain").addEventListener("click", explainThePage);
