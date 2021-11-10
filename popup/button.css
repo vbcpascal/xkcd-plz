@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "XkcdFont";
+  src: url("/font/xkcd-script.ttf");
+}
+
+body {
+  width: 200px;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: .4rem;
+  padding: 10px 20px;
+  width: 95px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "XkcdFont";
+}
