@@ -24,11 +24,12 @@ function randomPage() {
 function explainThePage() {
   chrome.tabs.query({ active: true, currentWindow: true },
     function (tabs) {
-      var url = tabs[0].url;
-      var index = xkcdIndex(url);
-      if (index) {
-        url = "https://explainxkcd.com/" + index;
-        chrome.tabs.create({ "url": url });
+      var tab = tabs[0];
+      var url = tab.url;
+      var xindex = xkcdIndex(url);
+      if (xindex) {
+        url = "https://explainxkcd.com/" + xindex;
+        chrome.tabs.create({ "url": url, "index": tab.index + 1 });
       }
     }
   );
